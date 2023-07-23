@@ -368,6 +368,13 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
+"Assets/Game Mechanic Scripts/Scripts/Camera2DFollow.cs"
+"Assets/Game Mechanic Scripts/Scripts/IncreaseScore.cs"
+"Assets/Game Mechanic Scripts/Scripts/Player/DetectCollision.cs"
+"Assets/Game Mechanic Scripts/Scripts/Player/PhysicsObject.cs"
+"Assets/Game Mechanic Scripts/Scripts/Restart.cs"
+"Assets/Game Mechanic Scripts/Scripts/ScoreManagerScript.cs"
+"Assets/scripts/player.cs"
 "Assets/scripts/puzzle.cs"
 -langversion:9.0
 
