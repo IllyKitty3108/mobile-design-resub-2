@@ -4,22 +4,30 @@ using UnityEngine;
 
 public class GameEndCollectible : MonoBehaviour
 {
+    
+    private GameManager gameManager; // Reference to the GameManager script.
+
+    private void Start()
+    {
+        // Find the GameManager in the scene and get its script component.
+        gameManager = GameObject.FindObjectOfType<GameManager>();
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            // Player found the collectible, end the game
-            EndGame();
+            // Optionally, play a sound or particle effect when the item is collected.
+            // You can also increase the player's score or apply other game mechanics.
+
+            // Call the GameOver() method from the GameManager to trigger the game over condition.
+            if (gameManager != null)
+            {
+                gameManager.GameOver();
+            }
+
+            Destroy(gameObject);
         }
     }
-
-    private void EndGame()
-    {
-        // Implement your game-ending logic here
-        Debug.Log("Game Over!");
-        // For example, you can show a game-over screen, display a score, or perform other end-game actions.
-
-        // To quit the game, you can uncomment the line below (use with caution in a real game)
-        // Application.Quit();
-    }
 }
+
