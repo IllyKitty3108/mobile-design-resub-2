@@ -2,22 +2,24 @@
 
 public class DetectCollision : MonoBehaviour
 {
+    // Reference to the player controller script (assuming you have one)
+    public PlayerController playerController;
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Object"))
+        if (collision.gameObject.CompareTag("Player"))
         {
-            // Collision with an object tagged as "OtherObject" occurred.
-            // Do something here, like destroying the other object.
-            Destroy(collision.gameObject);
+            // Player character detected the floor object
+            playerController.SetIsGrounded(true);
         }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Object"))
+        if (collision.gameObject.CompareTag("Player"))
         {
-            // The collision with the object tagged as "OtherObject" ended.
-            // Do something here if needed.
+            // Player character is no longer on the floor object
+            playerController.SetIsGrounded(false);
         }
     }
 }
