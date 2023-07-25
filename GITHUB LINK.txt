@@ -1,0 +1,4 @@
+Note: game over messages will be shown in the debug pannel, as they are mini games and they would usually go straight to the next tlevel after completion.
+
+
+github link: https://github.com/IllyKitty3108/mobile-design-resub-2
